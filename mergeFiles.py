@@ -7,7 +7,7 @@ from pyspark.sql.types import DateType
 
 # try:
 #     # Connect to an existing database
-#     connection = psycopg2.connect(user="postgres",password="#it's4Postgres",host="127.0.0.1",port="5433",database="postgres")
+#     connection = psycopg2.connect(user="postgres",password="*******",host="127.0.0.1",port="5433",database="******")
 #     # Create a cursor to perform database operations
 #     cursor = connection.cursor()
 #     # Executing a SQL query
@@ -33,7 +33,7 @@ df = spark.read \
     .option("url", "jdbc:postgresql://localhost:5433/postgres") \
     .option("dbtable", "ratings") \
     .option("user", "postgres") \
-    .option("password", "#it's4Postgres") \
+    .option("password", "********") \
     .option("driver", "org.postgresql.Driver") \
     .load()
 
